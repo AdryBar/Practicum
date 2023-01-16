@@ -1,14 +1,23 @@
-public class Praktikum {
-
+class Praktikum {
     public static void main(String[] args) {
-        int money = 500; // Деньги на корм
-        int foodPerDay = 100; // Стоимость пачки корма
-        int days = 0; // Дни, когда вы сможете покупать корм
-        for ( int i = money ; (i - foodPerDay) >= 0 ; i = i - 100 ) {
-            days = days + 3;
-            System.out.println("На " + days + "-й день останется " + (i - 100) + " рублей.");
-        }
-        System.out.println("Денег хватит на " + days + " дней.");
-    }
 
+        for ( int i = 1; i <= 5; i++) {// В тренировке должно выполниться 5 кругов
+        System.out.println("Круг " + i);
+
+        if ( i % 2 == 0 ) { for ( int b = 1; b <= 5; b++) // Выполнение каждого круга зависит от условия - проверьте, является ли круг чётным
+        // Если да, то присесть 5 раз
+        System.out.println("  Приседаем " + b);
+
+        } else { for ( int k = 1; k <= 3; k++)// Иначе нужно отжаться 3 раза
+        System.out.println("  Отжимаемся " + k);
+
+        } for ( int j = 1; j <= 7; j++) {// Независимо от номера круга качаем пресс 7 раз
+        System.out.println("  Качаем пресс " + j);
+
+        }// Небольшое подбадривание в конце каждого круга
+        System.out.println("Хороший темп, так держать!");
+        }
+
+        System.out.println("Отлично позанимались сегодня! Вы - молодец!");
+    }
 }
