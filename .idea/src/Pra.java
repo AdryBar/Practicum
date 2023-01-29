@@ -2,9 +2,7 @@ import java.util.Scanner;
 
 class Pra {
     public static void main(String[] args) {
-        double rateUSD = 78;
-        double rateEUR = 85;
-        double rateJPY = 0.74;
+        double rateUSD = 78, rateEUR = 85, rateJPY = 0.74;
 
         Scanner scanner = new Scanner(System.in);
 
@@ -14,17 +12,17 @@ class Pra {
         System.out.println("Сколько дней до зарплаты?");
         int daysBeforeSalary = scanner.nextInt();
 
-        while (true)//настройте бесконечный цикл здесь
+        while (true) { //настройте бесконечный цикл здесь
             System.out.println("Что вы хотите сделать? ");
-            System.out.println("1 - Конвертировать валюту");
-            System.out.println("2 - Получить совет");
-            System.out.println("0 - Выход"); // Новый пункт меню, осталось только реализовать логику
+        System.out.println("1 - Конвертировать валюту");
+        System.out.println("2 - Получить совет");
+        System.out.println("0 - Выход"); // Новый пункт меню, осталось только реализовать логику
 
         int command = scanner.nextInt();
 
         if (command == 1) {
             System.out.println("В какую валюту хотите конвертировать? Доступные варианты: 1 - USD, 2 - EUR или 3 - JPY.");
-                int currency = scanner.nextInt();
+            int currency = scanner.nextInt();
 
             if (currency == 1) {
                 System.out.println("Ваши сбережения в долларах: " + moneyBeforeSalary / rateUSD);
@@ -63,7 +61,7 @@ class Pra {
             break;
         } else {
             System.out.println("Извините, такой команды пока нет.");
+            }
         }
-       // Скорее всего тут ошибка, нужно что-то дописать!
     }
 }
